@@ -1,0 +1,81 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #292626;
+    padding: 10px 0;
+}
+
+nav{
+   position: absolute;
+   top:120px;
+   right: 0 ;
+}
+
+nav li{
+
+    display: inline;
+    text-align: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 50%;
+    padding: 0 20px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #FEFEFE;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #ffbd6e;
+    text-decoration: underline;
+}
+ 
+footer{
+    text-align: center;
+    background-color: #292626;
+    position: relative;
+    padding:40px;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+}
+
+/*Aquí inicia el CSS para  home*/
+.banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto; 
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear:left;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
