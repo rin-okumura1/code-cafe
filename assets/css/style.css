@@ -1,26 +1,42 @@
+@import "~@flaticon/flaticon-uicons/css/all/all";
+/* Estilos home*/
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-ppal{
+    padding: 0 60 0 0;
+    margin: 0;
+    width: 250px;
+    height: 250px;
 }
 
 header {
     background-color: #292626;
     padding: 10px 0;
+    
 }
+
+.caja{
+    width: 1080px;
+    position: relative;
+    margin: 0 auto;
+}
+
 
 nav{
    position: absolute;
-   top:120px;
+   top:110px;
    right: 0 ;
 }
 
 nav li{
-
     display: inline;
-    text-align: center;
-    justify-content: flex-end;
-    width: 50%;
-    height: 50%;
-    padding: 0 20px;
+    margin: 0 0 0 15px;
 }
 
 nav a{
@@ -35,28 +51,215 @@ nav a:hover{
     color: #ffbd6e;
     text-decoration: underline;
 }
+
+/* Estilos carrousel home*/
+
+.carrousel{
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.carrousel-inner{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrousel-item{
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel-item img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    
+}
+/* media query tablet*/
+@media (max-width: 768px) {
+    .logo-ppal{
+        width: 150px;
+        height: 150px;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav a{
+        font-size: 18px;
+    }
+    .card-ppal{
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+/* media query celular*/
+@media (min-width: 480px) {
+    .logo-ppal{
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav a{
+        font-size: 16px;
+    }
+    .card-ppal{
+        max-width: 90%;
+        padding: 10px;
+    }
+    .footer{
+        padding: 5px;
+    }
+    .copyright{
+        font-size: 11px;
+    }
+}
+
+/* Controles carrousel home*/
+.carrousel-control{
+    position:absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color:#FEFEFE;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transition: translateY(-50%);
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+/* Card principal home*/
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0;
+}
+
+.card-ppal{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4 px rgba(0,0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Card caracteristicas home*/
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px;
+    background-color: #292626;
+    margin: 40px auto;
+}
+
+.card{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4 px rgba(0,0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card i {
+    font-size: 50px;
+    color:#FEFEFE;
+    margin-bottom: 15px;
+}
+
+.card h3{
+    font-size: 1.5em;
+    margin-bottom: 10 px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    
+}
+
+.card p{
+    font-size: 1 em;
+    color: #555;
+    font-style: italic;
+    text-align: left;
+}
+
+/*Estilos historia home*/
+
+.img-historia{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-historia{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4 px rgba(0,0, 0, 0.1);
+    margin: 20 auto;
+    padding: 100px;
+    text-align: center;
+    width: 900px;
+}
+
+/* Estilos footer */
  
+.logo-foot{
+    width: 80px;
+    height: 80px;
+    padding: auto;
+}
+
 footer{
     text-align: center;
     background-color: #292626;
-    position: relative;
-    padding:40px;
+    padding:10px;
+    
 }
 
 .copyright{
     color:#FFFFFF;
-    font-size: 13px;
-    margin:20px;
+    font-size: 10px;
+    margin:15px;
 }
 
-/*Aquí inicia el CSS para  home*/
-.banner{
-    width: 100%;
-}
+/*Estilos titulos y p home*/
 
 .principal{
     padding: 3em 0;
-    background: #FEFEFE;
+    /*background: #FEFEFE;*/
     width: 940px;
     margin: 0 auto; 
 }
@@ -66,16 +269,15 @@ footer{
     font-size: 2em;
     margin: 0 0 1em;
     clear:left;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.titulo-secundario{
+    text-align: center;
+    font-size: 1 em;
+    margin: 0 0 1em;
+    clear:left;
 }
 
 .principal p{
     margin: 0 0 1em;
-}
-
-.principal strong{
-    font-weight: bold;
-}
-
-.principal em{
-    font-style: italic;
 }
