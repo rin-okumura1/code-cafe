@@ -1,5 +1,22 @@
+@import "~@flaticon/flaticon-uicons/css/all/all";
+/* Estilos home*/
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../img/background.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
+
+.logo-ppal{
+    padding: 0 60 0 0;
+    margin: 0;
+    width: 250px;
+    height: 250px;
 }
 
 header {
@@ -7,24 +24,30 @@ header {
     background-color: #292626;
 }
 
-nav{
-   position: absolute;
-   top:120px;
-   right: 0 ;
+.caja{
+    width: 100%;
+    max-width: 1080px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav li{
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
-    display: inline;
-    text-align: center;
-    justify-content: flex-end;
-    width: 50%;
-    height: 50%;
-    padding: 0 20px;
+nav ul li{
+    text-align:center;
 }
 
 nav a{
-    text-transform: uppercase;
+    padding: 10px;
     color: #FEFEFE;
     font-weight: bold;
     font-size: 22px;
@@ -35,48 +58,282 @@ nav a:hover{
     color: #ffbd6e;
     text-decoration: underline;
 }
+
+/* Estilos carrousel home*/
+
+.carrousel{
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.carrousel-inner{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrousel-item{
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carrousel-item img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* media query tablet*/
+@media screen and (max-width: 768px) {
+    .logo-ppal{
+        width: 150px;
+        height: 150px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav ul li{
+        width: auto;
+        display: inline;
+    }
+    nav a{
+        font-size: 18px;
+        padding: 10px;
+    }
+    .card-ppal{
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+/* media query celular*/
+@media screen and (max-width: 480px) {
+    .logo-ppal{
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul{
+        flex-wrap: column;
+        align-items: center;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav a{
+        font-size: 16px;
+        padding: 8px;
+        display: block;
+        text-align: center;
+    }
+    .card-ppal{
+        max-width: 90%;
+        padding: 10px;
+    }
+    .footer{
+        padding: 5px;
+    }
+    .copyright{
+        font-size: 11px;
+    }
+}
+
+/* Controles carrousel home*/
+.carrousel-control{
+    position:absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color:#FEFEFE;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transition: translateY(-50%);
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+/* Card principal home*/
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0;
+}
+
+.card-ppal{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px;
+}
+
+
+/* Card caracteristicas home*/
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #292626;
+}
+
+.card{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    color:#FEFEFE;
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.card h3{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    
+}
+
+.card p{
+    font-size: 1em;
+    color: #555;
+    font-style: italic;
+    text-align: left;
+}
+
+/*Estilos historia home*/
+
+.card-historia{
+    background-color: #FEFEFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    max-width: 70%;   
+}
+
+.card-historia img{
+    flex:1;
+    max-width: 50%;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.contenido-historia{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-historia h3{
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    text-shadow: 1px 1pc 0 rgba(0,0,0,0.5);
+}
+
+.contenido-historia p{
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+    font-style: italic;
+    text-align: left;
+}
+.button-historia{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    cursor: pointer;
+}
+/* Estilos footer */
  
+.logo-foot{
+    width: 80px;
+    height: 80px;
+}
+
 footer{
     max-height: 350px;
     text-align: center;
     background-color: #292626;
-    position: relative;
-    padding:40px;
+    padding:10px;
+    
 }
 
 .copyright{
     color:#FFFFFF;
-    font-size: 13px;
-    margin:20px;
+    font-size: 10px;
+    margin:15px;
 }
 
-/*Aquí inicia el CSS para  home*/
-.banner{
-    width: 100%;
-}
+/*Estilos titulos y p home*/
 
-.principal{
-    padding: 3em 0;
-    background: #FEFEFE;
-    width: 940px;
-    margin: 0 auto; 
-}
+.titulo-principal{
+    padding-left: 10px;
+    font-size: 12vw;
+    text-align: center;
+} 
 
 .titulo-principal{
     text-align: center;
-    font-size: 2em;
+    font-size: 4em;
     margin: 0 0 1em;
     clear:left;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.titulo-secundario{
+    padding-left: 10px;
+    font-size: 2em;
+    text-align: center;
 }
 
-.principal p{
-    margin: 0 0 1em;
-}
-
-.principal strong{
-    font-weight: bold;
-}
-
-.principal em{
-    font-style: italic;
+.card-ppal p {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px;
 }
