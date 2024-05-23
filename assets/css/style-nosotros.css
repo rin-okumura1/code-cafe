@@ -1,0 +1,211 @@
+/* body{
+   font-family: 'Montserrat', sans-serif;
+}
+.cajatotal {
+   box-sizing: border-box;
+   border: 1.5px solid rgb(56, 41, 44);
+   border-radius: 13px;
+   width: 100%;
+   float: left;
+}
+ 
+ .logoheader {
+
+    max-width: 20%;
+    max-height: 40%;
+    size: 10px;
+    border-radius: 3rem;
+    padding: 1rem;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+    width: 50%;
+    }
+
+ .topnav {
+
+   background-image: url(./img/web\ background.jpg);
+   border-radius: 13px;
+   overflow: hidden;
+   text-align: center;
+ }
+
+ .topnav a {
+   display: inline-block;
+   color: rgb(30, 6, 6);
+   text-align: center;
+   padding: 1px 13px;
+   text-decoration: none;
+   font-size: 22px;
+   text-transform: uppercase;
+   font-weight: bold;
+   text-shadow: 2px 2px 6px rgb(69, 29, 29);
+ }
+
+ .topnav a:hover {
+   color: rgb(129, 0, 0);
+   text-decoration: dotted;
+ }
+
+ .topnav .icon {
+   display: none;
+ }
+
+ 
+
+ @media screen and (max-width: 600px) {
+   .topnav a:not(:first-child) {display: none;}
+   .topnav a.icon {
+     float: right;
+     display: block;
+   }
+
+   @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+         float: none;
+         display: block;
+         text-align: left;
+       }
+     } */
+
+     body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+        font-family: 'Montserrat', sans-serif;
+  }
+
+  .logoheader {
+    max-width: 20%;
+    max-height: 20%;
+    size: 10px;
+    border-radius: 3rem;
+    padding: 1rem;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+    }
+    .topnav {
+
+background-color: rgb(255, 255, 255);
+border-radius: 13px;
+      overflow: hidden;
+      text-align: center;
+    }
+   
+    .topnav a {
+      display: inline-block;
+      color: rgb(30, 6, 6);
+      text-align: center;
+      padding: 1px 13px;
+      text-decoration: none;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgb(69, 29, 29);
+    }
+   
+    .topnav a:hover {
+      color: rgb(129, 0, 0);
+      text-decoration: dotted;
+    }
+   
+    .topnav .icon {
+      display: none;
+    }
+  .layout {
+      display: grid;
+      gap: 0.25rem;
+      grid-template-rows:
+          4rem 6rem auto 6rem 6rem 4rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          'header' 'sidebar'
+          'main' 'widget'
+          'statistics' 'footer';
+      height: 100vh;
+  }
+  
+  @media (min-width: 480px) {
+      .layout {
+          display: grid;
+          grid-template-rows: 4rem auto 6rem 4rem;
+          grid-template-columns: 10rem auto auto;
+          grid-template-areas:
+              'header header header'
+              'sidebar main main'
+              'sidebar widget statistics'
+              'footer footer footer';
+      }
+  }
+  
+  header {
+      grid-area: header;
+      border-radius: 13px;
+      background-image: url(./img/web\ background.jpg);
+  }
+  
+  footer {
+      grid-area: footer;
+      background: #c08bfd;
+  }
+  
+  nav {}
+  
+  main {
+    margin-top: 2%;
+    padding-top: 12px;
+      grid-area: main;
+      background: rgba(44, 28, 28, 0.3)
+  }
+
+  .historianuestra {
+    margin-top: 2%;
+    padding-top: 12px;
+    column-count: 4;
+  }
+
+  #titulo1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(57, 17, 20), 0 0 5px rgb(56, 0, 1);
+  }
+
+  #manoscafe {
+    max-width: 25%;
+    max-height: 8%;
+    size: 10px;
+    border-radius: 3rem;
+    padding: 1rem;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+  #coffeepng {
+    width: 55%;
+    height: 55%;
+ 
+  }
+  
+  .widget {
+      grid-area: widget;
+      background: #ff8983;
+      width: 100%;
+  }
+  
+  .statistics {
+      grid-area: statistics;
+      background: #99c2fe;
+      width: 100%;
+  }
