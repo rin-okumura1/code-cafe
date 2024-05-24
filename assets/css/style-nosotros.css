@@ -92,10 +92,11 @@
    margin-left: auto;
    margin-right: auto;
     }
-    .topnav {
 
-background-color: rgb(255, 255, 255);
-border-radius: 13px;
+  .topnav {
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 13px;
       overflow: hidden;
       text-align: center;
     }
@@ -133,7 +134,7 @@ border-radius: 13px;
       height: 100vh;
   }
   
-  @media (min-width: 480px) {
+  /* @media (min-width: 480px) {
       .layout {
           display: grid;
           grid-template-rows: 4rem auto 6rem 4rem;
@@ -143,8 +144,7 @@ border-radius: 13px;
               'sidebar main main'
               'sidebar widget statistics'
               'footer footer footer';
-      }
-  }
+      } */
   
   header {
       grid-area: header;
@@ -152,13 +152,7 @@ border-radius: 13px;
       background-image: url(./img/web\ background.jpg);
   }
   
-  footer {
-      grid-area: footer;
-      background: #c08bfd;
-  }
-  
-  nav {}
-  
+
   main {
     margin-top: 2%;
     padding-top: 12px;
@@ -167,8 +161,10 @@ border-radius: 13px;
   }
 
   .historianuestra {
+    justify-content: center;
+    text-align: justify;
     margin-top: 2%;
-    padding-top: 12px;
+    padding: 12px 12px 15px ;
     column-count: 4;
   }
 
@@ -193,9 +189,10 @@ border-radius: 13px;
   }
 
   #coffeepng {
+    padding-left: 17%;
+    justify-content: center;
     width: 55%;
     height: 55%;
- 
   }
   
   .widget {
@@ -209,3 +206,53 @@ border-radius: 13px;
       background: #99c2fe;
       width: 100%;
   }
+
+  footer {
+    height: 50px;
+    background-image: url(./img/web\ background.jpg);
+    text-align: center;background-position: center bottom;
+    padding: 20px 10px 10px 10px;
+	  background-size: 100% 85%;
+	  background-repeat: repeat-x;
+	  min-height: 50vh;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .footer-logo img {
+      max-width: 30%;
+    max-height: 30%;
+    size: 10px;
+    border-radius: 3rem;
+    padding: 1px;
+   display: block;
+   margin-left: auto;
+  }
+
+
+  @media (min-width: 480px) {
+    .layout {
+        display: grid;
+        grid-template-rows: 4rem auto 6rem 4rem;
+        grid-template-columns: 10rem auto auto;
+        grid-template-areas:
+            'header header header'
+            'sidebar main main'
+            'sidebar widget statistics'
+            'footer footer footer';
+    }
