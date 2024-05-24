@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./assets/css/style-contacto.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codo & Coffee</title>
+    
+    
+</head>
+
+<body>
+    <header>
+        <h2><img src="./assets/img/logoPrincipal.jpg" alt="Logo"></h2>
+        <nav>
+            <ul>
+                <li><a href="./assets/img/index.html">Home</a></li>
+                <li><a href="./assets/img/productos.html">Productos</a></li>
+                <li><a href="./assets/img/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <fieldset> 
+            <form name="form">
+                <div>
+                    <label for="nombre">ingrese nombre:
+                        <br>
+                        <input type="text" name="nombre" placeholder="nombre" id="nombre" >
+                    </label>
+                </div>
+                <div>
+                    <label for="apellido">ingrese apellido:
+                    <br>
+                    <input type="text" name="apellido" placeholder="apellido" id="apellido" >
+                </label>
+                </div>
+                <div>
+                    <label for="email">ingrese email:
+                        <br>
+                        <input type="email" name="email" placeholder="email" id="email">
+                    </label>
+                </div>
+                <div>
+                    <p>interes</p>
+                    <input type="radio" id="html" name="interesado" value="proveedor" >
+                    <label for="html">proveedor</label><br>
+                    <input type="radio" id="css" name="interesado" value="sucursal" >
+                    <label for="css">sucursal</label><br>
+                    <input type="radio" id="javascript" name="interesado" value="cliente" >
+                    <label for="javascript">cliente</label>
+                </div>
+                <button id="button">enviar</button>
+            </form>
+       </fieldset>
+ 
+<script src="./assets/js/validacion.js"></script>
+</body>
+
+</html>
