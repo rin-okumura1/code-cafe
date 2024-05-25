@@ -54,7 +54,7 @@
     border-radius: 50%;
 }
 .fondoMain{
-    background-image: url('/img/background.jpg'); 
+    background-image: url('/assets/img/background.jpg'); 
     background-size:auto; 
     background-repeat: repeat; 
 }
