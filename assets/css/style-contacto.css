@@ -9,12 +9,12 @@ body{
 fieldset{
     background-color: beige;
 }
-header {
+/* header {
     background-color: #292626;
     padding: 10px 0;
-}
+} */
 
-nav{
+/* nav{
    position: absolute;
    top:120px;
    right: 0 ;
@@ -28,20 +28,20 @@ nav li{
     width: 50%;
     height: 50%;
     padding: 0 20px;
-}
+} */
 
-nav a{
+/* nav a{
     text-transform: uppercase;
     color: #FEFEFE;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
-}
-
+} */
+/* 
 nav a:hover{
     color: #ffbd6e;
     text-decoration: underline;
-}
+} */
 
 .fondoMain{
     background-image: url('/assets/img/background.jpg'); 
@@ -49,9 +49,23 @@ nav a:hover{
     background-repeat: repeat; 
 }
 
+h3{
+    padding: 1px  ;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(16, 15, 15), 0 0 5px rgb(56, 0, 1);
+}
+
 main {
     flex: 1;
+    padding: 0px 0 30px 0;
+    font-family: 'Montserrat', sans-serif;
 }
+
+/* 
 .footer {
     background-color: #292626;
     text-align: center;
@@ -59,4 +73,4 @@ main {
 }
 .logo-foot {
     height: 50px;
-}
+} */
