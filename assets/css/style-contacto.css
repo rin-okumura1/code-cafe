@@ -1,10 +1,10 @@
 body{
-    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #292626;
-   background-position: right;
-   background-repeat: no-repeat;
-   
-
+    background-position: right;
+    background-repeat: no-repeat;
 }
 fieldset{
     background-color: beige;
@@ -41,4 +41,22 @@ nav a{
 nav a:hover{
     color: #ffbd6e;
     text-decoration: underline;
+}
+
+.fondoMain{
+    background-image: url('/assets/img/background.jpg'); 
+    background-size:auto; 
+    background-repeat: repeat; 
+}
+
+main {
+    flex: 1;
+}
+.footer {
+    background-color: #292626;
+    text-align: center;
+    padding: 10px 0;
+}
+.logo-foot {
+    height: 50px;
 }

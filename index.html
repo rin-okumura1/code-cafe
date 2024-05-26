@@ -3,38 +3,87 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/style-home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="icon" href="/img/icono3.ico">
+        <link rel="icon" href="./img/BlackandOrangeVintageCoffeeShopLogo(1).ico">
         <title>Codo & Coffee</title>
     </head>
     <body>
         <header>
-            <h2><img src="/img/logoPrincipal.jpg" alt="Logo"></h2>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./productos.html">Productos</a></li>
-                    <li><a href="./ontacto.html">Contacto</a></li>
-                    <li><a href="./Sobre Nosotros.html"> Sobre Nosotros</a></li>
-                </ul>
-            </nav>
+            <div class="caja">
+                <img src="./assets/img/logoPrincipal.jpg" class="logo-ppal" alt="Logo">
+                <nav>
+                    <ul>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-            
-            <main>
-                <section class="principal">
 
-                    <h2 class="titulo-principal">Codo & Coffee</h2>
-                </section>
-
-
-                
-            </main>
-
-            <footer>
-                <img src="/img/icono3.jpg">
-                <p class="copyright">&copy Copyright Codo&Coffee - 2024</p>
-            </footer>
-        
+        <div class="carrousel">
+            <div class="carrousel-inner">
+                <div class="carrousel-item active">
+                    <img src="./assets/img/carrousel1.jpg" alt="carrousel 1">    
+                </div>
+                <div class="carrousel-item">
+                    <img src="./assets/img/carrousel2.png" alt="carrousel 2">
+                </div>
+                <div class="carrousel-item">
+                    <img src="./assets/img/carrousel3.jpg" alt="carrousel 3">
+                </div>
+            </div>
+            <button class="carrousel-control prev" onclick="prevDiapositiva()">&#10094;</button>
+            <button class="carrousel-control next" onclick="nextDiapositiva()">&#10095;</button>
+        </div>
+        <script src="/assets/js/mainIndex.js"></script>  
+        <main>          
+            <section class="principal">
+                <div class="card-ppal">
+                    <h3 class="titulo-principal">Codo & Coffee</h3>
+                    <h3 class="titulo-secundario">Los mejores sabores a tu alcance</h3> 
+                    <p>Nuestro café, cuidadosamente seleccionado y tostado a la perfección, se destaca por su sabor único que cautiva incluso a los paladares más exigentes. Cada sorbo es una invitación a un viaje sensorial, donde los ricos aromas y las notas sutiles se combinan para crear una armonía perfecta.</p>
+                    <p>Elegir los mejores granos de café de origen sostenible, asegura que cada taza no solo sea deliciosa, sino también responsable con el medio ambiente.</p>
+                    <p>Te invitamos a probar nuestros productos y experimentar el sabor único que solo nosotros podemos ofrecer. ¡Tu paladar te lo agradecerá!</p>
+                </div>
+            </section>
+            <section class="cards">
+                <div class="card">
+                    <img src="./assets/img/taza-caliente-alt.png" alt="Taza caliente" class="card-icon">
+                    <h3>Aroma impresionante</h3>
+                    <p>El café se prepara tostando primero los granos de café verdes</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/primer-laurel.png" alt="Alta calidad" class="card-icon">
+                    <h3>Alta calidad</h3>
+                    <p>Selecionamos los mejores granos para conservar su humedad</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/granos-de-cafe.png" alt="Granos de café" class="card-icon">
+                    <h3>Grados perfectos</h3>
+                    <p>Tostado a una temperatura estable para no perder su intgridad</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/plantula-de-bolsa.png" alt="Bolsa de café" class="card-icon">
+                    <h3>Molido a gusto</h3>
+                    <p>Molemos a gusto dependiendo de la cafereta que tengas</p>
+                </div>
+            </section>
+            <section class="card-historia">
+                <div class="contenido-hist">
+                    <img src="./assets/img/hands-that-carry-coffee-beans.jpg" alt="manos=cafe">
+                    <h3 >Conoce nuestra historia</h3>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                    <button class="button-historia" onclick="window.location.href='sobreNosotros.html';">Conoce más &#10095;</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <img src="./assets/img/LOGOFOOT.png" class="logo-foot" alt="Logo footer">
+            <p class="copyright">&copy;Copyright Codo&Coffee - 2024</p>
+        </footer>
     </body>
 </html>
