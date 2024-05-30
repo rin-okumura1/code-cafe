@@ -1,3 +1,12 @@
+.title1{
+    text-align: center;
+    font-size:30px ;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(16, 15, 15), 0 0 5px rgb(56, 0, 1);
+
+}
 .carousel {
     position: relative;
     max-width: 300px;
