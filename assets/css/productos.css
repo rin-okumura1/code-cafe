@@ -7,6 +7,15 @@
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(16, 15, 15), 0 0 5px rgb(56, 0, 1);
 
 }
+.title2{
+    text-align: center;
+    font-size:30px ;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(129, 69, 69);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(16, 15, 15), 0 0 5px rgb(56, 0, 1);
+
+}
 .carousel {
     position: relative;
     max-width: 300px;
@@ -93,6 +102,73 @@
 
 .rotate-scale-up {
     animation: rotate-scale-up 0.65s linear both;
+}
+
+.productos-cards{
+    padding: 8px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 2px solid #2b2828;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image {
+    padding-top: 3PX;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.product-image img {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90%;
+}
+
+.product-info {
+    padding: 20px;
+    position: relative;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 15px;
+}
+
+.toggle-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.additional-info {
+    display: none;
+    padding-top: 10px;
+}
+
+.additional-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 @-webkit-keyframes rotate-scale-up {
