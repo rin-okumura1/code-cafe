@@ -5,7 +5,7 @@ export default class UsersDaoMysql extends Mysql {
 
     constructor() {
         super()
-        this.table = 'USUARIOS'
+        this.table = 'usuarios'
         this.#createTable()
     }
 
@@ -13,7 +13,8 @@ export default class UsersDaoMysql extends Mysql {
         const query = `CREATE TABLE IF NOT EXISTS ${this.table}(
             id INT PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
-            age INT NOT NULL            
+            surname VARCHAR(100) NOT NULL,
+            email VARCHAR(100) NOT NULL            
         )`
         this.connection.query(query)
     }
@@ -46,9 +47,9 @@ export default class UsersDaoMysql extends Mysql {
     }
 
     async addUser(user) {
-        const usuario = user
-        const query = `INSERT INTO ${this.table} VALUES (?,?,?,?)`
-        const [result] = await this.connection.promise().query(query, usuario)
+        const {name,surname,email} = user
+        const query = `INSERT INTO ${this.table} VALUES (${name},${surname},${email})`
+        const [result] = await this.connection.promise().query(query, user)
         return result
     }
 

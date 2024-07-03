@@ -3,6 +3,6 @@ const config = {
     port: 3306,
     user: 'root',
     password: '',
-    database: 'node24132'
+    database: 'node'
 }
 export default config

@@ -1,4 +1,5 @@
 import UsersDaoMysql from "../db/daos/users.daos.js"
+import User from "../models/User.js"
 
 export default class UsersController{
    
@@ -8,8 +9,10 @@ export default class UsersController{
      cargarFormulario(req ,res ,err){
         
     }
-     agregarUsuarios(req ,res ,err){
-        this.daos.addUser({...req.body})
+     async agregarUsuarios(req ,res ,err){
+        console.log({...req.body})
+        let jodete =new User(req.body.nombre,req.body.apellido,req.body.email)
+        await this.daos.addUser(jodete)
         res.json({...req.body})
     }
 }
