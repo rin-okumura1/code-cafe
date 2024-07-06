@@ -1,16 +1,16 @@
 import UsersController from "../controller/users.controller.js";
-import router from "./router.js";
+import BaseRouter from "./router.js";
 
-export default class UsersRouter extends router{
-    constructor(){
-        super()
-            
-        this.UsersController=new UsersController()
-        this.getRoutes()
+export default class UsersRouter extends BaseRouter {
+    constructor() {
+        super();
+        this.usersController = new UsersController();
+        this.setupRoutes();
     }
-     getRoutes(){
-        this.router.get('/', this.UsersController.cargarFormulario)
-        .post("/",  this.UsersController.agregarUsuarios)
-        
+
+    setupRoutes() {
+        this.router
+            .get('/', this.usersController.cargarFormulario.bind(this.usersController))
+            .post("/", this.usersController.agregarUsuarios.bind(this.usersController));
     }
 }

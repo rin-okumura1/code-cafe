@@ -3,8 +3,8 @@ let botonSumbit=document.getElementById("button")
 let form    =document.forms.form
 let formData={}
 function update(){
-    formData={nombre:form.nombre.value,
-    apellido:form.apellido.value,
+    formData={name:form.name.value,
+    surname:form.surname.value,
     email:form.email.value,
     interesado:form.interesado.value,}
 }
@@ -22,5 +22,5 @@ if(!validateCampos()){
 
 )
 function validateCampos(){
-   return regex.test(formData.email)&&formData.apellido.length>0&&formData.interesado.length>0&&formData.nombre.length>0
+   return regex.test(formData.email)&&formData.surname.length>0&&formData.interesado.length>0&&formData.name.length>0
 }
