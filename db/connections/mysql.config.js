@@ -4,20 +4,20 @@
     user: 'root',
     password: '',
     database: 'node'
+} */
+
+const config = {
+ Host: 'sql5.freesqldatabase.com',
+user: sql5718576,
+password: Dka9PnJ9Pe,
+name: sql5718576,
+Port number: 3306,
 }
- */
-
-// Host: sql5.freesqldatabase.com
-// Database name: sql5718576
-// Database user: sql5718576
-// Database password: Dka9PnJ9Pe
-// Port number: 3306
-
- const config = {
+/*  const config = {
      host: process.env.HOST_DB, 
      user: process.env.USER_DB,
      password: process.env.PASS_DB,
      database: process.env.DB
- }
+ } */
 
 export default config
