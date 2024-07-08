@@ -47,10 +47,10 @@ export default class UsersDaoMysql extends Mysql {
         return result;
     }
 
-    async modifyUser(user) {
-        const { id, name, surname, email } = user;
+    async modifyUser(userId, userData) {
+        const { name, surname, email } = userData;
         const query = `UPDATE ${this.table} SET name = ?, surname = ?, email = ? WHERE id = ?`;
-        const [result] = await this.connection.promise().query(query, [name, surname, email, id]);
+        const [result] = await this.connection.promise().query(query, [name, surname, email, userId]);
         return result;
     }
 

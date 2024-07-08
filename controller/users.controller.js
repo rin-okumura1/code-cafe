@@ -25,12 +25,15 @@ export default class UsersController {
     }
 
     async modificarUsuario(req, res) {
-        console.log({ ...req.body });
-
+        const userId = req.params.id; 
+        const { name, surname, email } = req.body;
+    
         try {
-            const userData = new User(req.body.name, req.body.surname, req.body.email);
-            await this.daos.modifyUser(userData);
-            res.json({ ...req.body });
+            const userData = new User(name, surname, email);
+            
+            await this.daos.modifyUser(userId, userData);
+    
+            res.json({ message: "Usuario modificado exitosamente", data: userData });
         } catch (error) {
             console.error("Error al modificar usuario:", error);
             res.status(500).json({ message: "Error al modificar usuario" });
