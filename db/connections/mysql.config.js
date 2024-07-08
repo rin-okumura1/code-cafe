@@ -7,11 +7,10 @@
 } */
 
 const config = {
- Host: 'sql5.freesqldatabase.com',
-user: sql5718576,
-password: Dka9PnJ9Pe,
-name: sql5718576,
-Port number: 3306,
+Host: 'sql5.freesqldatabase.com',
+user: 'sql5718576',
+password: 'Dka9PnJ9Pe',
+name: 'sql5718576',
 }
 /*  const config = {
      host: process.env.HOST_DB, 
