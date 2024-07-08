@@ -23,4 +23,17 @@ export default class UsersController {
             res.status(500).json({ message: "Error al agregar usuario" });
         }
     }
+
+    async modificarUsuario(req, res, err) {
+        console.log({ ...req.body });
+
+        try {
+            const userData = new User(req.body.name, req.body.surname, req.body.email);
+            await this.daos.modifyUser(userData);
+            res.json({ ...req.body });
+        } catch (error) {
+            console.error("Error al agregar usuario:", error);
+            res.status(500).json({ message: "Error al agregar usuario" });
+        }
+    }
 }
