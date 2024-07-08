@@ -38,7 +38,7 @@ export default class UsersController {
     }
 
     async deleteUser(req, res) {
-        const userId = 1;  // Hardcodear user ID
+        const userId = 5;
         try {
             await this.daos.deleteUser(userId);
             res.status(200).json({ message: "Usuario eliminado" });
