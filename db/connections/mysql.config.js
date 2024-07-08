@@ -6,6 +6,7 @@ const config = {
     database: 'node'
 }
 
+
 // Host: sql5.freesqldatabase.com
 // Database name: sql5718576
 // Database user: sql5718576

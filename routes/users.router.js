@@ -1,9 +1,9 @@
-import UsersController from "../controller/users.controller.js";
-import BaseRouter from "./router.js";
+import { Router } from 'express';
+import UsersController from '../controller/users.controller.js';
 
-export default class UsersRouter extends BaseRouter {
+export default class UsersRouter {
     constructor() {
-        super();
+        this.router = Router();
         this.usersController = new UsersController();
         this.setupRoutes();
     }
@@ -11,9 +11,8 @@ export default class UsersRouter extends BaseRouter {
     setupRoutes() {
         this.router
             .get('/', this.usersController.cargarFormulario.bind(this.usersController))
-            .post("/", this.usersController.agregarUsuarios.bind(this.usersController))
-            .delete("/delete:id",this.usersController.deleteUser.bind(this.usersController))  
-            .put("/put:id", this.usersController.modifyUser.bind(this.UsersController))
-            ;
+            .post('/', this.usersController.agregarUsuarios.bind(this.usersController))
+            .delete('/delete/:id', this.usersController.deleteUser.bind(this.usersController))  
+            .put('/put/:id', this.usersController.modificarUsuario.bind(this.usersController));
     }
 }

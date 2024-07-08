@@ -6,12 +6,12 @@ export default class UsersController {
         this.daos = new UsersDaoMysql();
     }
 
-    cargarFormulario(req, res, err) {
+    cargarFormulario(req, res) {
         console.log({ ...req.body });
         res.send('Formulario cargado');
     }
 
-    async agregarUsuarios(req, res, err) {
+    async agregarUsuarios(req, res) {
         console.log({ ...req.body });
 
         try {
@@ -24,7 +24,7 @@ export default class UsersController {
         }
     }
 
-    async modificarUsuario(req, res, err) {
+    async modificarUsuario(req, res) {
         console.log({ ...req.body });
 
         try {
@@ -32,8 +32,19 @@ export default class UsersController {
             await this.daos.modifyUser(userData);
             res.json({ ...req.body });
         } catch (error) {
-            console.error("Error al agregar usuario:", error);
-            res.status(500).json({ message: "Error al agregar usuario" });
+            console.error("Error al modificar usuario:", error);
+            res.status(500).json({ message: "Error al modificar usuario" });
+        }
+    }
+
+    async deleteUser(req, res) {
+        const userId = 1;  // Hardcodear user ID
+        try {
+            await this.daos.deleteUser(userId);
+            res.status(200).json({ message: "Usuario eliminado" });
+        } catch (error) {
+            console.error("Error al eliminar usuario:", error);
+            res.status(500).json({ message: "Error al eliminar usuario" });
         }
     }
 }
