@@ -47,4 +47,14 @@ export default class UsersController {
             res.status(500).json({ message: "Error al eliminar usuario" });
         }
     }
+
+    async verUsuarios(req, res) {
+        try {
+            const usuarios = await this.daos.getAllUsers(); // Obtiene los usuarios
+            res.status(200).json({ message: "Usuarios listados", data: usuarios }); // Devuelve los usuarios en la respuesta
+        } catch (error) {
+            console.error("Error al eliminar usuario:", error);
+            res.status(500).json({ message: "Error al cargar usuarios" });
+        }
+    }
 }

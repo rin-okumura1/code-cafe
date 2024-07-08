@@ -13,6 +13,7 @@ export default class UsersRouter {
             .get('/', this.usersController.cargarFormulario.bind(this.usersController))
             .post('/', this.usersController.agregarUsuarios.bind(this.usersController))
             .delete('/delete/:id', this.usersController.deleteUser.bind(this.usersController))  
-            .put('/put/:id', this.usersController.modificarUsuario.bind(this.usersController));
+            .put('/put/:id', this.usersController.modificarUsuario.bind(this.usersController))
+            .get('/listarUsuario', this.usersController.verUsuarios.bind(this.usersController));
     }
 }
