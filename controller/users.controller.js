@@ -15,7 +15,8 @@ export default class UsersController {
         console.log({ ...req.body });
 
         try {
-            const userData = new User(req.body.name, req.body.surname, req.body.email);
+            const { name, surname, email, tipoUsuario } = req.body;
+            const userData = new User(name, surname, email, tipoUsuario);
             await this.daos.addUser(userData);
             res.json({ ...req.body });
         } catch (error) {
@@ -41,7 +42,7 @@ export default class UsersController {
     }
 
     async deleteUser(req, res) {
-        const userId = 10;
+        const userId = req.params.id; 
         try {
             await this.daos.deleteUser(userId);
             res.status(200).json({ message: "Usuario eliminado" });
@@ -53,11 +54,38 @@ export default class UsersController {
 
     async verUsuarios(req, res) {
         try {
-            const usuarios = await this.daos.getAllUsers(); // Obtiene los usuarios
-            res.status(200).json({ message: "Usuarios listados", data: usuarios }); // Devuelve los usuarios en la respuesta
+            const usuarios = await this.daos.getAllUsers();
+            res.status(200).json({ message: "Usuarios listados", data: usuarios });
         } catch (error) {
             console.error("Error al eliminar usuario:", error);
             res.status(500).json({ message: "Error al cargar usuarios" });
         }
     }
+
+    async modificarcategoria(req, res) {
+        const userId = req.params.id; 
+        const { categoria } = req.body;
+    
+        try {
+            const userData = new User(categoria);
+            
+            await this.daos.modifyCat(userId, userData);
+    
+            res.json({ message: "categoria cargada exitosamente", data: userData });
+        } catch (error) {
+            console.error("categoria cargada NO exitosamente", error);
+            res.status(500).json({ message: "Error al modificar usuario" });
+        }
+    }
+    async verUsuariosPorCategoria(req, res) {
+        try {
+            const id = req.params.id;
+            const usuarios = await this.daos.getAllUsersxCat(id);
+            res.status(200).json({ message: "Usuarios listados por categoria", data: usuarios });
+        } catch (error) {
+            console.error("Error al eliminar usuario:", error);
+            res.status(500).json({ message: "Error al cargar usuarios" });
+        }
+    }
+
 }

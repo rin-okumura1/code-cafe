@@ -17,7 +17,6 @@ export default class Server {
         const usersRoutes = new UsersRoutes()
         this.app.use(express.static("public"))
         Server.app.use('/users', usersRoutes.router)
-  
     }
 
 

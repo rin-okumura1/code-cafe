@@ -34,7 +34,7 @@
         </header>
         <main class="container mt-5">
             <h3>Formulario de Contacto</h3>
-            <form name="form" action="/users" method="post">
+            <form name="form" action="/users/agregarUsuario" method="post">
                 <fieldset class="container">
                     <div class="form-group">
                         <label for="name">Ingrese nombre:</label>
@@ -51,15 +51,15 @@
                     <div class="form-group">
                         <p>Interés</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="proveedor" name="interesado" value="proveedor">
+                            <input class="form-check-input" type="radio" id="proveedor" name="tipoUsuario" value=1>
                             <label class="form-check-label" for="proveedor">Proveedor</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="sucursal" name="interesado" value="sucursal">
+                            <input class="form-check-input" type="radio" id="sucursal" name="tipoUsuario" value=2>
                             <label class="form-check-label" for="sucursal">Sucursal</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="cliente" name="interesado" value="cliente">
+                            <input class="form-check-input" type="radio" id="cliente" name="tipoUsuario" value=3>
                             <label class="form-check-label" for="cliente">Cliente</label>
                         </div>
                     </div>
