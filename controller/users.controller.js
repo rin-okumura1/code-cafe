@@ -41,7 +41,6 @@ export default class UsersController {
     }
 
     async deleteUser(req, res) {
-        const userId = 10;
         try {
             await this.daos.deleteUser(userId);
             res.status(200).json({ message: "Usuario eliminado" });
